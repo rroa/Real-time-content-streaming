@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="RPG">
+      <UniqueIdentifier>{2eb5f244-627f-4f5e-99f6-5473c5b31274}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{2c9d2ea3-7991-43df-be3f-1467fa0cdaff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maps">
+      <UniqueIdentifier>{e3d6695b-64ff-4399-8a0d-d827155779a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\Entities">
+      <UniqueIdentifier>{3f2285fc-b2d5-4b01-a21c-c2301d7df13e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\Managers">
+      <UniqueIdentifier>{7a24a92d-35e5-450c-854b-c7cce18e68bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\Factory">
+      <UniqueIdentifier>{31eb338f-5874-4611-ab65-2f681f44bea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\Draw">
+      <UniqueIdentifier>{e71aa885-fd8c-4ec6-8483-e78edaa00e6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\Events">
+      <UniqueIdentifier>{80bcab68-c59f-4a34-bd50-9ab412ba34a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\Utilities">
+      <UniqueIdentifier>{3b0c2aa3-cce1-4d1a-99d4-f9b3ef8b1d3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Engine\Console">
+      <UniqueIdentifier>{82bb3234-7f3d-4a82-9561-3d7437e80353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Fonts">
+      <UniqueIdentifier>{42ec7978-239b-4d7d-8c5c-c57be5a3193d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Systems">
+      <UniqueIdentifier>{0da67834-d5d3-4321-b18e-ca7db9f33daf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Utilities">
+      <UniqueIdentifier>{aa386948-f3b9-4a87-bf6d-47ea44ac7674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Parameters">
+      <UniqueIdentifier>{38ffd2aa-6203-4ae2-a6e0-ac180ae42552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Math">
+      <UniqueIdentifier>{e6efc7e2-5827-43d3-a628-cef340268a74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\Pathing">
+      <UniqueIdentifier>{b81d951f-d6dd-46f9-9d61-d1b8d8044119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{2a4cda52-a4c6-4814-91d6-27670b1a6a62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Profiler">
+      <UniqueIdentifier>{343e533c-4cce-4bec-8aed-e3836bd71ff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HTTP">
+      <UniqueIdentifier>{2584997c-3ba2-4231-a62d-60a9413982e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threading">
+      <UniqueIdentifier>{9ad8edb4-eb6b-42b8-9ba2-4fd37b563208}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RPG.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="entities.xml">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="tiles.xml">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="Maps\maps.xml">
+      <Filter>Maps</Filter>
+    </None>
+    <None Include="Maps\maps-set.xml">
+      <Filter>Maps</Filter>
+    </None>
+    <None Include="README.txt" />
+    <None Include="app.xml">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="map1.xml">
+      <Filter>Maps</Filter>
+    </None>
+    <None Include="map2.xml">
+      <Filter>Maps</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBuffer.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="GLUniform.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="IDraw.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="IRender.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="IScene.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialDataOBJ.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixStack.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoader.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoaderOBJ.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="objloader.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ReportErrors.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="RPG.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangles.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Agent.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="BluePrintManager.h">
+      <Filter>RPG\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="MapManager.h">
+      <Filter>RPG\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="BluePrint.h">
+      <Filter>RPG\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="BluePrintBase.h">
+      <Filter>RPG\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>RPG\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer2D.h">
+      <Filter>RPG\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="NamedProperties.h">
+      <Filter>RPG\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="NamedProperty.h">
+      <Filter>RPG\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="NamedPropertyBase.h">
+      <Filter>RPG\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Subscriber.h">
+      <Filter>RPG\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="SubscriberBase.h">
+      <Filter>RPG\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="IInventory.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="IStats.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="TileType.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera2D.h">
+      <Filter>RPG\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSystem.h">
+      <Filter>RPG\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLExtensions.h">
+      <Filter>RPG\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Console.h">
+      <Filter>Engine\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleCommands.h">
+      <Filter>Engine\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapFont.h">
+      <Filter>Engine\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapFontCharacter.h">
+      <Filter>Engine\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="FogParameters.h">
+      <Filter>Engine\Parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="ParallaxParameters.h">
+      <Filter>Engine\Parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderParameters.h">
+      <Filter>Engine\Parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="TextManager.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="StringExtensions.h">
+      <Filter>Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Trie.h">
+      <Filter>Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix44.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector4.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtilities.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Filters.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml.hpp">
+      <Filter>Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="pugiconfig.hpp">
+      <Filter>Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>RPG\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeType.h">
+      <Filter>RPG\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="AI.h">
+      <Filter>RPG\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="AStar.h">
+      <Filter>RPG\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>RPG\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Alarm.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Clock.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="StopWatch.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileData.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileEntry.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileEntryPool.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileHelpers.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileManager.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileManagerOutput.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Profiler.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfilerConfig.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfilerMacros.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfilerPrereqs.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileZone.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="HashBufferJob.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadFileJob.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseJob.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadWrapper.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="sdMutex.hpp">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="sdMutexLock.hpp">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="zip.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="JobManager.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="unzip.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseJobComparison.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateManager.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerColor.h">
+      <Filter>HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="GetPlayerColorJob.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="DownloadFileJob.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckTextureChange.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTPWrapper.h">
+      <Filter>HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckForUpdatesJob.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="AppInfo.h">
+      <Filter>HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="ManifestDownload.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="SetManifestJob.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Entity.cpp">
+      <Filter>RPG\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Agent.cpp">
+      <Filter>RPG\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>RPG\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>RPG\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="BluePrintManager.cpp">
+      <Filter>RPG\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="MapManager.cpp">
+      <Filter>RPG\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>RPG\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer2D.cpp">
+      <Filter>RPG\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>RPG\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>RPG\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="TileType.cpp">
+      <Filter>RPG\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera2D.cpp">
+      <Filter>RPG\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="EventSystem.cpp">
+      <Filter>RPG\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLExtensions.cpp">
+      <Filter>RPG\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="IStats.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixStack.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoaderOBJ.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="ReportErrors.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Console.cpp">
+      <Filter>Engine\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleCommands.cpp">
+      <Filter>Engine\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapFont.cpp">
+      <Filter>Engine\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapFontCharacter.cpp">
+      <Filter>Engine\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>Engine\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Engine\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Engine\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Engine\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="FogParameters.cpp">
+      <Filter>Engine\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="ParallaxParameters.cpp">
+      <Filter>Engine\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderParameters.cpp">
+      <Filter>Engine\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="TextManager.cpp">
+      <Filter>Engine\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>Engine\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="StringExtensions.cpp">
+      <Filter>Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Trie.cpp">
+      <Filter>Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix44.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector4.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtilities.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="pugixml.cpp">
+      <Filter>Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>RPG\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC.cpp">
+      <Filter>RPG\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="AStar.cpp">
+      <Filter>RPG\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="StateManager.cpp">
+      <Filter>RPG\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Alarm.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Clock.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileEntry.cpp">
+      <Filter>Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileEntryPool.cpp">
+      <Filter>Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileHelpers.cpp">
+      <Filter>Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileManager.cpp">
+      <Filter>Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileManagerOutput.cpp">
+      <Filter>Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="JobManager.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="sdMutex.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="sdMutexLock.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="zip.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="unzip.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateManager.cpp">
+      <Filter>Engine\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerColor.cpp">
+      <Filter>HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="AppInfo.cpp">
+      <Filter>HTTP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RPG.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

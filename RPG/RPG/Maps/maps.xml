@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<maps>  
+  <map name="WasteLands" tilesPerRow="25" tilesPerColumn="25" PixelsPerTile="80" ItemsGenerationMode="RANDOM_WEIGHTED" >    
+    <tileType name="rock"  weight="6" />
+    <tileType name="dirt"  weight="90" />
+    <tileType name="lava"  weight="15" />
+    <tileType name="moving sand" weight="10" />
+
+    <agent name="Dark Elf" weight="4" />
+    <agent name="Red Knight" weight="3" />
+    <item name="Torch" weight="2" />    
+    <item name="Big Health Potion" weight="1" />
+    <item name="Potion of Water Resistance" weight="2" />
+    <item name="Potion of Fire Resistance" weight="2" />
+
+    
+    <agent  name="Villager" />
+    
+    <agent name="Dark Elf" updateAlways="true" />
+    <agent name="Red Knight" />
+    
+    <entity name="Door" WarpTo="4,7" Destination="Meadows" />    
+    <entity name="Door" WarpTo="0,0" blocksPosition="true" entityThatUnblocks="Key Of God" Destination="Beach" />    
+    
+    <agent name="Hero" >
+      <item name="High Wizard's Helmet" />      
+    </agent>
+  </map>
+</maps>

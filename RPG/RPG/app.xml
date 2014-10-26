@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application renderAPI="GL" FPS="60" showWindowMenu="false" version="0.0.0">
+  <frameBuffers colorTextureSlot="0" depthTextureSlot="1" />
+  <shaders directory="Data">
+    <shader name="FragmentShader" extension="fp" />
+    <shader name="VertexShader" extension="vp" />
+    <!--
+    Texture Slots are explictely assigned so please set valid values
+    DiffuseTextureSampler  = 0
+    NormalTextureSampler   = 1
+    SpecularTextureSampler = 2
+    EmissiveTextureSampler = 3
+    -->
+    <textureUniform name="DiffuseTextureSampler"  textureSlot="0" />
+    <textureUniform name="NormalTextureSampler"   textureSlot="1" />
+    <textureUniform name="SpecularTextureSampler" textureSlot="2" />
+    <textureUniform name="EmissiveTextureSampler" textureSlot="3" />
+    <textureUniform name="HeightTextureSampler"   textureSlot="4" />
+  </shaders>
+  <camera></camera>
+  <console></console>
+  <configuration>
+    <entities config="entities.xml" />
+    <maps path="Maps/" tilesDefinition="tiles.xml" />    
+  </configuration>
+</application>

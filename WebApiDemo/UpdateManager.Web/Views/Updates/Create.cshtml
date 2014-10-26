@@ -1,0 +1,164 @@
+﻿@using UpdateManager.Entities;
+@using UpdateManager.Web.Helpers;
+
+@model UpdateManager.Web.ViewModels.UpdateViewModel
+
+@{
+    var updateTypeList = typeof(UpdatePackagePriority).GetItems(0);
+    var updateType = typeof (UpdateType).GetItems(0);
+}
+
+@Styles.Render("~/Content/dropzone")
+
+@{
+    ViewBag.Title = "Application Update";
+}
+<h1>@ViewBag.Title</h1>
+<div class="tabbable">
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#pane1" data-toggle="tab">Files</a></li>
+        <li><a href="#pane2" data-toggle="tab">Package Settings</a></li>
+        <li><a href="#pane3" data-toggle="tab">Update Info</a></li>
+    </ul>
+    <div class="tab-content">        
+        <div id="pane1" class="tab-pane active">
+            <div class="clearfix"></div>
+            <div>
+                <p>Drag and drop the files that will comprise the update.</p>
+            </div>                 
+            <div class="well well-lg">
+                @using (Html.BeginForm("SaveUploadedFile", "Updates", FormMethod.Post, new { enctype = "multipart/form-data", id = "dropzoneForm", @class = "dropzone" }))
+                {
+                    <div class="fallback">
+                        <input name="file" type="file" multiple />
+                        <input type="submit" value="Upload" />
+                    </div>
+                }
+            </div>
+        </div>
+        <div id="pane2" class="tab-pane">
+            <div class="clearfix"></div>
+            <div>               
+                <p>Define the way the files should be packaged.</p>
+            </div>            
+            <div class="well well-lg">
+                <div>                    
+                    <div class="clearfix"></div>
+                    <div id="loader" style="display: none">
+                        <div class="clearfix"></div>
+                        <h2><i>Loading...</i></h2>
+                        <img src="/Content/images/loading.gif" /><span>Generating Pacakges...</span>
+                        <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>                    
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Update Type</th>
+                                <th>Account Type</th>
+                                <th>Type</th>                                                                
+                                <th>Size</th>
+                            </tr>
+                        </thead>
+                        <tbody>                                                   
+                        </tbody>              
+                    </table>
+                    <ul class="all" style="display:none"></ul>
+                    <div class="col-md-6">
+                        <div id="high-pkg" style="display:none">                            
+                            <ul id="high" class="list-group">
+                                <li class="list-group-item active">
+                                    <span id="high-badge" class="badge">0</span>
+                                    High Priority Package
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="medium-pkg" style="display:none">                            
+                            <ul id="medium" class="list-group">
+                                <li class="list-group-item active">
+                                    <span id="medium-badge" class="badge">0</span>
+                                    Medium Priority Package
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="low-pkg" style="display:none">                            
+                            <ul id="low" class="list-group">
+                                <li class="list-group-item active">
+                                    <span id="low-badge" class="badge">0</span>
+                                    Low Priority Package
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br/>
+                    <button id="generatePkg" type="button" class="btn btn-info">Generate Packages</button>                                            
+                </div>                
+            </div>
+        </div>
+        <div id="pane3" class="tab-pane">            
+            <div class="clearfix"></div>
+            <p>Application update general information.</p>
+            <div class="well well-lg">
+                @using (Html.BeginForm("Create", "Updates", FormMethod.Post, new { EncType = "multipart/form-data", @role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+
+                    @Html.Hidden("Files")
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name)
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control input-lg", @placeholder = "Enter a Name" })
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Description)
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control input-lg", @row = 7, @placeholder = "Enter a Description" })
+                        @Html.ValidationMessageFor(model => model.Description)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Type)                        
+                        @Html.DropDownList("Type", updateType, new { @class = "form-control input-lg" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ChangeLog)
+                        @Html.EditorFor(model => model.ChangeLog, new { @class = "form-control input-lg" })
+                        @Html.ValidationMessageFor(model => model.ChangeLog)
+                    </div>
+                    <div class="form-group">
+                        @*<input type="submit" value="Submit" />*@
+                        <button type="submit" class="btn btn-primary input-lg">Submit</button>
+                    </div>
+    }
+            </div>
+        </div>
+
+    </div><!-- /.tab-content -->    
+</div><!-- /.tabbable -->
+
+
+@Html.DropDownList("types", updateTypeList, new { @style = "display:none" })
+@Html.DropDownList("roles", (IEnumerable<SelectListItem>)ViewBag.Roles, new { @style = "display:none" })
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/dropzone")
+@Scripts.Render("~/bundles/custom-behavior")
+
+@section scripts
+{
+    <script>
+        //$(function () {
+        //    $('#btn-add').click(function () {
+        //        var randomnumber = Math.floor(Math.random() * 11);
+        //        var randomcolor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        //        $('.warm').append("<li id=\"" + randomnumber + "\" style=\"background: " + randomcolor + "\"></li>");
+        //    });
+        //});
+    </script>    
+}

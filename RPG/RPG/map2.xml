@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<maps>
+  <map name="Meadows" tilesPerRow="20" tilesPerColumn="20" PixelsPerTile="60" >
+    <tileType name="moving sand"  weight="5" />    
+    <tileType name="grass"        weight="80" />
+    <tileType name="rock"         weight="8" />
+
+    <item name="Key" />
+    <item name="Torch" position="1,1" />    
+    <entity name="Door" Destination="WasteLands" WarpTo="11,14" position="4,7" />
+    <entity name="Door" blocksPosition="true" entityThatUnblocks="Key" Destination="Cave" WarpTo="0,0" position="14,7" />
+  </map>
+  <map name="Cave" tilesPerRow="8" tilesPerColumn="7" PixelsPerTile="60" >
+    <tileType name="lava"  weight="15" />
+    <tileType name="moving sand" weight="10" />
+    <tileType name="dirt"   weight="80" />
+    <item name="Key Of God" />
+    <item name="Hands of Orlac" />
+    <agent name="Rusted Mechanoid " />
+    <item name="High Wizard's Brigandine" />
+    <entity name="Door" Destination="WasteLands" WarpTo="11,14" />
+  </map>
+  <map name="Beach" tilesPerRow="10" tilesPerColumn="5" PixelsPerTile="60" >
+    <tileType name="sand"  weight="90" />
+    <tileType name="water"  weight="15" />
+    <item name="Potion of Water Resistance" />
+    <entity name="Door" Destination="WasteLands" WarpTo="11,14" />
+  </map>
+</maps>

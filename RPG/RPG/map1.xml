@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<maps>  
+  <map name="WasteLands" tilesPerRow="25" tilesPerColumn="25" PixelsPerTile="80" ItemsGenerationMode="RANDOM_WEIGHTED" >    
+    <tileType name="rock"  weight="3" />
+    <tileType name="dirt"  weight="90" />    
+    
+
+    
+    <agent name="Hero" >
+      <item name="High Wizard's Helmet" />      
+    </agent>
+  </map>
+</maps>

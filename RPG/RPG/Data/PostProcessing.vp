@@ -1,0 +1,36 @@
+#version 330 core
+
+// Input vertex data, different for all executions of this shader.
+layout(location = 0) in vec3 vertexPosition_modelspace;
+layout(location = 1) in vec2 vertexUV;
+
+/*######################################################*/
+// UNIFORMS
+/*######################################################*/
+uniform float u_outLineOffset; //= 0.001;
+
+/*######################################################*/
+// OUTPUTS
+/*######################################################*/
+
+// Textures
+out vec2 texCoord;
+
+// Outline offsets
+out vec2 offsetLeftTexCoord;
+out vec2 offsetRightTexCoord;
+out vec2 offsetTopTexCoord;
+out vec2 offsetBottomTexCoord;
+
+void main()
+{
+	gl_Position =  vec4( vertexPosition_modelspace, 1 );
+	texCoord = ( vertexPosition_modelspace.xy + vec2( 1 , 1 )) / 2.0;
+
+	// Offsetting the texCoord
+	offsetLeftTexCoord   = texCoord.xy + vec2( -u_outLineOffset , 0 );
+	offsetRightTexCoord  = texCoord.xy + vec2(  u_outLineOffset , 0 );
+	offsetTopTexCoord	 = texCoord.xy + vec2(  0,  u_outLineOffset );
+	offsetBottomTexCoord = texCoord.xy + vec2(  0, -u_outLineOffset );
+}
+

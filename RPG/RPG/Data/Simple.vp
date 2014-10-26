@@ -1,0 +1,113 @@
+#version 330 core
+
+/*######################################################*/
+// ATTRIBUTES
+/*######################################################*/
+layout(location = 0) in vec3 vertexPosition_modelspace;
+layout(location = 1) in vec2 vertexUV;
+layout(location = 2) in vec3 vertexNormal_modelspace;
+layout(location = 3) in vec3 vertexTangent_modelspace;
+layout(location = 4) in vec3 vertexBitangent_modelspace;
+
+/*######################################################*/
+// UNIFORMS
+/*######################################################*/
+uniform struct Matrices
+{
+	mat4 MVP;
+	mat4 Projection;
+	mat4 View;
+	mat4 Model;
+	mat4 ModelView;
+} u_matrices;
+
+uniform vec3 u_LightPosition_worldspace;
+uniform vec3 u_CameraPosition_worldspace;
+
+/*######################################################*/
+// OUTPUTS
+/*######################################################*/
+
+// Vertex
+out vec3 VertexPosition_worldspace;
+out vec4 VertexPosition_cameraspace;
+
+// Normals
+out vec3 VertexNormal_worldspace;
+out vec4 VertexNormal_cameraspace;
+
+// Textures
+out vec2 texCoord;
+
+// Light
+out vec3 LightDirection_cameraspace;
+out vec3 LightDirection_tangentspace;
+out vec3 LightPosition_cameraspace;
+out vec3 LightPosition_worldspace;
+
+// Camera
+out vec3 EyeDirection_cameraspace;
+out vec3 EyeDirection_tangentspace;
+out vec3 EyePosition_worldspace;
+
+// Light & Camera
+out vec3 HalfwayVector;
+
+// #########################
+smooth out vec3 vNormal;
+
+void main()
+{
+	// Output position of the vertex, in clip space : MVP * position
+	gl_Position				   =  u_matrices.MVP * vec4( vertexPosition_modelspace, 1 );
+
+	// Vertex
+	//
+	VertexPosition_worldspace  = ( u_matrices.Model * vec4( vertexPosition_modelspace, 1 )).xyz;
+	VertexPosition_cameraspace = ( u_matrices.View * u_matrices.Model * vec4( vertexPosition_modelspace, 1 ));
+
+	// Normal
+	//
+	VertexNormal_worldspace    = ( u_matrices.Model * vec4( vertexNormal_modelspace, 1 )).xyz;
+	VertexNormal_cameraspace   = ( u_matrices.View * u_matrices.Model * vec4( vertexNormal_modelspace, 1 ));
+	vNormal					   = vertexNormal_modelspace.xyz;
+
+	// Texture
+	texCoord = vertexUV;
+
+	// Camera
+	EyeDirection_cameraspace   = vec3( 0.0, 0.0, 0.0 ) - VertexPosition_cameraspace.xyz;	
+	LightPosition_cameraspace  = ( u_matrices.View * vec4( u_LightPosition_worldspace, 1 )).xyz;
+	LightDirection_cameraspace = LightPosition_cameraspace + EyeDirection_cameraspace;
+	EyePosition_worldspace     = u_CameraPosition_worldspace;
+
+	// Light
+	LightPosition_worldspace   =  u_LightPosition_worldspace;
+	
+	// Tangent space transformations
+	//
+	mat3 MV3x3 = mat3( u_matrices.ModelView );
+
+	// model to camera = ModelView
+	vec3 vertexTangent_cameraspace   = MV3x3 * vertexTangent_modelspace;
+	vec3 vertexBitangent_cameraspace = MV3x3 * vertexBitangent_modelspace;
+	vec3 vertexNormal_cameraspace    = MV3x3 * vertexNormal_modelspace;
+
+	// Building TBN Matrix
+	mat3 TBN = transpose(
+	mat3(
+		vertexTangent_cameraspace,
+		vertexBitangent_cameraspace,
+		vertexNormal_cameraspace ));
+
+	LightDirection_tangentspace = TBN * LightDirection_cameraspace;
+	EyeDirection_tangentspace   = TBN * EyeDirection_cameraspace;	
+
+	// Calculating halfway vector according to Blinn–Phong shading model
+	// Reference: http://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_shading_model
+	vec3 P		  = VertexPosition_cameraspace.xyz;
+	vec3 L		  = normalize( u_LightPosition_worldspace - P );
+	vec3 V		  = normalize( u_CameraPosition_worldspace - P );
+	vec3 H		  = L + V;
+	HalfwayVector = H;
+}

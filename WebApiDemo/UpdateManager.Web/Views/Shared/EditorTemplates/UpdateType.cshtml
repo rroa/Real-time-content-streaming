@@ -1,0 +1,8 @@
+﻿@using UpdateManager.Entities;
+@using UpdateManager.Web.Helpers;
+
+@{
+    var updateTypeList = typeof(UpdateType).GetItems((int?)Model);
+}
+@Html.DropDownList("UpdateType", updateTypeList, new { @class = @ViewData["class"] })
+

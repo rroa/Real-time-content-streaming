@@ -1,0 +1,8 @@
+﻿@using UpdateManager.Entities;
+@using UpdateManager.Web.Helpers;
+
+@{
+    var updateStatusList = typeof(UpdateStatus).GetItems((int?)Model);
+}
+
+@Html.DropDownList("UpdateStatus", updateStatusList)

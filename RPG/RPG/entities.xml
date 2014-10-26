@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<entities>
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- HERO DEFINITION -->
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <agent name="Hero" 
+         canBeControlled="true" 
+         texture="newavatar.png" 
+         updateAlways="true" 
+         dexterity="5" 
+         canBeDamaged="true"
+         position="0,0" />
+
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- MONSTERS -->
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <agent name="Armadax"
+         health="1000"
+         canBeDamaged="true"
+         dexterity="30"
+         dodge="50"
+         toughness="0"
+         strength="0"
+         canMove="false"
+         movementSpeed="1.0"
+         behavior="HATE"
+         color="0.286275,0.627451,0.721569,1.0">
+    <item name="Hands of Orlac" />
+  </agent>
+  
+  <agent name="Dwarven Mechanoid " 
+         health="1500" 
+         canBeDamaged="true"
+         dexterity="50"
+         dodge="0"
+         toughness="100"
+         strength="0"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="HATE"
+         color="0.270588,0.576471,0.47451,1.0" />
+
+  <agent name="Rusted Mechanoid "
+         health="1500"
+         canBeDamaged="true"
+         dexterity="40"
+         dodge="0"
+         toughness="100"
+         strength="100"
+         canMove="false"
+         movementSpeed="1.0"
+         behavior="HATE"
+         color="0.270588,0.584314,0.976471,1.0">
+    <item name="Kicks of the Doom God" />
+  </agent>
+  
+  <agent name="Rusted Dwarven " 
+         health="1500" 
+         canBeDamaged="true"
+         dexterity="20"
+         dodge="10"
+         toughness="200"
+         strength="100"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="HATE"
+         color="0.513726,0.690196,0.988235,1.0" />
+  
+  <agent name="Kidrik The Mauler " 
+         health="800" 
+         canBeDamaged="true"
+         dexterity="60"
+         dodge="10"
+         toughness="300"
+         strength="50"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="FEAR"
+         color="0.0823529,0.513726,0.976471,1.0" />
+  
+  <agent name="Blackfist Brigand" 
+         health="500" 
+         canBeDamaged="true"
+         dexterity="30"
+         dodge="50"
+         toughness="200"
+         strength="0"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="HATE"
+         color="0.509804,0.6,0.92549,1.0" />
+  
+  <agent name="Corpsefire Warrior"
+         canBeDamaged="true"
+         health="1500"
+         dexterity="20"
+         dodge="0"
+         toughness="0"
+         strength="0"
+         canMove="false"         
+         movementSpeed="2.0" 
+         behavior="FEAR"
+         color="0.980392,0.321569,0.858824,1.0" />
+  
+  <agent name="Grant Eldrayn" 
+         health="1000" 
+         canBeDamaged="true"
+         dexterity="70"
+         dodge="50"
+         toughness="100"
+         strength="300"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="HATE"
+         color="0.32549,0.627451,0.788235,1.0" />
+  
+  <agent name="Bone Golem" 
+         health="500" 
+         canBeDamaged="true"
+         dexterity="0"
+         dodge="10"
+         toughness="0"
+         strength="0"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="HATE"
+         color="0.568627,0.137255,0.615686,1.0" />
+  
+  <agent name="Tomb Jailer" 
+         health="1500" 
+         canBeDamaged="true"
+         dexterity="0"
+         dodge="0"
+         toughness="0"
+         strength="200"
+         canMove="false"         
+         movementSpeed="0.5" 
+         behavior="FEAR"
+         color="0.803922,0.847059,0.572549,1.0" />
+  
+  <agent name="Elf" 
+         health="1500"
+         canBeDamaged="true"
+         dexterity="30"
+         dodge="50"
+         toughness="0"
+         strength="100"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="HATE"
+         color="0.745098,0.376471,0.486275,1.0" />
+  
+  <agent name="White Elf" 
+         health="1500" 
+         canBeDamaged="false"
+         dexterity="0"
+         dodge="0"
+         toughness="0"
+         strength="0"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="INDIFFERENCE"
+         color="0.831373,0.721569,0.454902,1.0" />
+  
+  <agent name="Dark Elf" 
+         health="1000" 
+         canBeDamaged="true"
+         dexterity="65"
+         dodge="0"
+         toughness="200"
+         strength="300"
+         canMove="true"         
+         movementSpeed="4.0" 
+         behavior="HATE"
+         color="1.0,1.0,0.913725,1.0" />
+  
+  <agent name="Aleera" 
+         health="100" 
+         canBeDamaged="false"
+         dexterity="0"
+         dodge="0"
+         toughness="0"
+         strength="0"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="INDIFFERENCE"
+         color="0.00392157,0.666667,0.552941,1.0" />
+  
+  <agent name="Verona" 
+         health="100" 
+         canBeDamaged="false"
+         dexterity="0"
+         dodge="0"
+         toughness="0"
+         strength="0"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="INDIFFERENCE"
+         color="0.235294,0.337255,0.0196078,1.0" />
+  
+  <agent name="Marihska" 
+         health="100" 
+         canBeDamaged="false"
+         dexterity="0"
+         dodge="0"
+         toughness="0"
+         strength="0"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="INDIFFERENCE"
+         color="0.721569,0.305882,0.678431,1.0" />
+  
+  <agent name="General Gnash" 
+         health="3500" 
+         canBeDamaged="true"
+         dexterity="0"
+         dodge="50"
+         toughness="100"
+         strength="400"
+         canMove="false"         
+         movementSpeed="1.0" 
+         behavior="HATE"
+         color="0.631373,0.262745,0.811765,1.0" />
+  
+  <agent name="Tutara Warlord" 
+         health="1500" 
+         canBeDamaged="true"
+         canMove="false"
+         movementSpeed="1.0"
+         behavior="FEAR"
+         color="0.00392157,0.360784,0.14902,1.0" />
+  
+  <agent name="Villager" 
+         health="100" 
+         canBeDamaged="false"
+         dexterity="0"
+         dodge="0"
+         toughness="0"
+         strength="0"
+         canMove="true"         
+         movementSpeed="4.0" 
+         behavior="INDIFFERENCE"
+         color="0.164706,0.141176,0.592157,1.0" />
+  
+  <agent name="Dark Knight" 
+         health="1500" 
+         canBeDamaged="true"
+         dexterity="30"
+         dodge="0"
+         toughness="200"
+         strength="0"
+         canMove="false"         
+         movementSpeed="0.6" 
+         behavior="HATE"
+         color="0.807843,0.407843,0.0470588,1.0" />
+  
+  <agent name="Silver Knight" 
+         health="1500" 
+         canBeDamaged="true"
+         dexterity="20"
+         dodge="20"
+         toughness="200"
+         strength="250"
+         canMove="false"         
+         movementSpeed="0.6" 
+         behavior="HATE"
+         color="0.527451,0.5705882,0.517647,1.0" />
+  
+  <agent name="Blue Knight" 
+         health="1500" 
+         canBeDamaged="true"
+         dexterity="10"
+         dodge="0"
+         toughness="0"
+         strength="0"
+         canMove="false"         
+         movementSpeed="0.6" 
+         behavior="HATE"
+         color="0.1,0.1,1.0,1.0" />
+  
+  <agent name="Red Knight" 
+         health="1000" 
+         canBeDamaged="true"
+         dexterity="0"
+         dodge="70"
+         toughness="200"
+         strength="0"
+         canMove="true"     
+         movementSpeed="0.6" 
+         behavior="HATE"         
+         color="1.0,0.1,0.15,1.0" />
+
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- ENTITIES -->
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <entity name="Door" blocksPosition="false" texture="door.png" scale="0.08" />  
+  <entity name="Stairs" />
+
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- ITEMS -->
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+  
+  <!--HEALTH-->
+  <item name="Health Potion" 
+        health="50.0" 
+        texture="health_potion.png" 
+        inventorySlot="CONSUMABLE"
+        scale="0.08" />
+  
+  <item name="Big Health Potion" 
+        health="100.0" 
+        texture="big_health_potion.png"
+        inventorySlot="CONSUMABLE"
+        scale="0.08" />
+  
+  <item name="Giant Health Potion" 
+        health="300.0" 
+        texture="giant_health_potion.png" 
+        inventorySlot="CONSUMABLE"
+        scale="0.08" />
+  
+  <item name="Huge Health Potion" 
+        health="500.0" 
+        texture="huge_health_potion.png"
+        inventorySlot="CONSUMABLE"
+        scale="0.08" />
+  
+  <item name="Super Health Potion" 
+        health="1000.0" 
+        texture="super_health_potion.png" 
+        inventorySlot="CONSUMABLE"
+        scale="0.08" />
+
+  <item name="Potion of Fire Resistance"
+        texture="potion_of_fire_resistance.png"
+        effectInSeconds="10"
+        inventorySlot="POTION_FIRE"
+        singleUse="true"
+        scale="0.08" />
+
+  <item name="Potion of Water Resistance"
+        texture="potion_of_water_resistance.png"
+        inventorySlot="POTION_WATER"
+        effectInSeconds="15"
+        singleUse="true"
+        scale="0.08" />
+
+  <!--INTERACTIVE-->
+  <item name="Torch" texture="torch.png" scale="0.04" />
+  <item name="Key" texture="key.png" scale="0.05" />
+  <item name="Key Of God" texture="key_of_god.png" scale="0.05" />
+
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <!--INVENTORY-->
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+  
+  <!--HEAD-->
+  <item name="Harbinger Helmet" 
+        inventorySlot="HEAD" 
+        dexterity="100" 
+        texture="harbinger_helmet.png" 
+        scale="0.08" />
+  
+  <item name="High Wizard's Helmet" 
+        inventorySlot="HEAD" 
+        dexterity="88" 
+        texture="high_wizard_helmet.png" 
+        scale="0.08" />
+  
+  <item name="Raider's Helmet" 
+        inventorySlot="HEAD" 
+        dexterity="65" 
+        texture="raiders_helmet.png" 
+        scale="0.08" />
+  
+  <item name="Unearthly Helmet" 
+        inventorySlot="HEAD" 
+        dexterity="50" 
+        texture="unearthly_helmet.png.png" 
+        scale="0.08" />
+  
+  <item name="Heavy Metal Helmet" 
+        inventorySlot="HEAD" 
+        dexterity="30" 
+        texture="high_wizard_helmet.png" 
+        scale="0.08" />
+
+  <!--CHEST-->
+  <item name="Heavy Metal Toolcoat"
+        inventorySlot="CHEST"
+        toughness="499.0"
+        texture="heavy_metal_toolcoat.png" 
+        scale="0.08" />
+
+  <item name="High Wizard's Brigandine"
+        inventorySlot="CHEST"
+        toughness="399.0"
+        texture="high_wizards_brigandine.png"
+        scale="0.08" />
+
+  <item name="Mondon's Plate"
+        inventorySlot="CHEST"
+        toughness="300.0"
+        texture="mondons_plate.png"
+        scale="0.08" />
+
+  <item name="The Chevalion"
+        inventorySlot="CHEST"
+        toughness="199.0"
+        texture="the_chevalion.png"
+        scale="0.08" />
+
+  <item name="The Flamecoat"
+        inventorySlot="CHEST"
+        toughness="100.0"
+        texture="the_flamecoat.png"
+        scale="0.08" />
+  
+  <!--ARMS-->
+  <item name="Hands of Orlac" 
+        inventorySlot="ARMS" 
+        strength="499.0" 
+        texture="hands_of_orlac.png" 
+        scale="0.08" />
+  
+  <item name="Harbinger Gauntlets" 
+        inventorySlot="ARMS" 
+        strength="399.0" 
+        texture="harbinger_gauntlets.png" 
+        scale="0.08" />
+  
+  <item name="Gauntlets of Workings"
+      inventorySlot="ARMS"
+      strength="300.0"
+      texture="gauntlets_of_workings.png"
+      scale="0.08" />
+  
+  <item name="Mondon's Bracers" 
+        inventorySlot="ARMS"
+        strength="199.0" 
+        texture="mondons_bracers.png" 
+        scale="0.08" />
+  
+  <item name="Rail-Forge Gauntlets" 
+        inventorySlot="ARMS" 
+        strength="100.0" 
+        texture="rail-forge_gauntlets.png" 
+        scale="0.08" />
+
+  <!--LEGS-->
+  <item name="Kicks of the Doom God"
+        inventorySlot="LEGS"
+        dodge="99.0"
+        texture="kicks_of_the_doom_god.png" 
+        scale="0.04" />
+
+  <item name="Boots of the Wraith Overlord"
+        inventorySlot="LEGS"
+        dodge="88.0"
+        texture="boots_of_the_wraith_overlord.png"
+        scale="0.08" />
+
+  <item name="Harbinger Shoes"
+        inventorySlot="LEGS"
+        dodge="65.0"
+        texture="harbinger_shoes.png"
+        scale="0.08" />
+
+  <item name="High Wizard's Brogans"
+        inventorySlot="LEGS"
+        strength="50.0"
+        texture="high_wizards_brogans.png"
+        scale="0.04" />
+
+  <item name="Mondon's Stompers"
+        inventorySlot="LEGS"
+        dodge="30.0"
+        texture="mondons_stompers.png"
+        scale="0.08" />
+</entities>>

@@ -1,0 +1,37 @@
+#version 330 core
+
+// Input vertex data, different for all executions of this shader.
+layout(location = 0) in vec3 vertexPosition_modelspace;
+layout(location = 1) in vec2 vertexUV;
+layout(location = 2) in vec3 vertexNormal_modelspace;
+
+// Output data ; will be interpolated for each fragment.
+out vec2 UV;
+
+// Values that stay constant for the whole mesh.
+uniform mat4 MVP;
+uniform mat4 V;
+uniform mat4 P;
+uniform mat4 M;
+uniform mat4 MV;
+
+smooth out vec4 vEyeSpacePos;
+smooth out vec3 vNormal;
+
+void main()
+{
+
+	// Output position of the vertex, in clip space : MVP * position
+	//gl_Position =  MVP * vec4(vertexPosition_modelspace,1);
+	vec4 vEyeSpacePosVertex = MV * vec4( vertexPosition_modelspace, 1.0 );
+	gl_Position = P * vEyeSpacePosVertex;
+	
+	// UV of the vertex. No special space for this one.
+	UV = vertexUV;
+
+	//vec4 vRes = matrices.normalMatrix*vec4(inNormal, 0.0);
+	vNormal = vertexNormal_modelspace.xyz;
+
+	vEyeSpacePos = vEyeSpacePosVertex;
+}
+

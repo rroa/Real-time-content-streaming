@@ -1,0 +1,12 @@
+﻿@model DateTime?
+
+@{
+    DateTime date = DateTime.Now;
+    if( @Model != null )
+    {
+        date = @Model.Value;
+    }
+}
+
+@Html.TextBox("", date.ToString("dd/MM/yyyy"),
+ new { @class = "date" })

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<tiles>
+  <tile name="grass" color="0,0.6,0.2" />
+  <tile name="sand"  color="0.91764, 0.72549, 0.53333" />
+  
+  <tile name="dirt" color="0.47058, 0.28235, 0" />
+  <tile name="gold" color="0.99215, 0.81568, 0.09019" />
+
+  <tile name="water"
+        isSolid="false"
+        damageSpeedInSeconds="5"
+        damageBehavior="HURT"
+        damageRatePerSecond="0.5"
+        doesNotWorkAgainst="Potion of Water Resistance"
+        color="0.2, 0.4, 0.6" />
+  
+  <tile name="rock" 
+        isSolid="true" 
+        color="0.29411, 0.29411, 0.29411" />
+  
+  <tile name="moving sand"
+        isSolid="false"
+        damageSpeedInSeconds="2"
+        damageBehavior="SHRINK"
+        damageRatePerSecond="0.5"
+        doesNotWorkAgainst="Boots of the Wraith Overlord"
+        color="0.91764, 0.72549, 0.53333" />
+  
+  <tile name="lava"  
+        isSolid="false" 
+        damageSpeedInSeconds="2" 
+        damageBehavior="HURT" 
+        damageRatePerSecond="0.5" 
+        doesNotWorkAgainst="Potion of Fire Resistance"
+        color="0.81176, 0.25098, 0.06274" />
+</tiles>

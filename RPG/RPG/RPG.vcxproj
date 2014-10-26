@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5BF8B702-67AE-4E42-BEB1-3E0FD630A9D9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RPG</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../dependencies/Casablanca/include;glew-1.9.0\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../dependencies/Casablanca/lib/x86/Debug;glew-1.9.0\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cpprest100d_1_2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../dependencies/Casablanca/include;glew-1.9.0\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../../dependencies/Casablanca/lib/x86/Debug;glew-1.9.0\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cpprest100_1_2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="app.xml" />
+    <None Include="entities.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="map1.xml" />
+    <None Include="map2.xml" />
+    <None Include="Maps\maps-set.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Maps\maps.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="README.txt" />
+    <None Include="RPG.ico" />
+    <None Include="small.ico" />
+    <None Include="tiles.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Agent.h" />
+    <ClInclude Include="Alarm.h" />
+    <ClInclude Include="AppInfo.h" />
+    <ClInclude Include="AStar.h" />
+    <ClInclude Include="BaseJob.h" />
+    <ClInclude Include="BaseJobComparison.h" />
+    <ClInclude Include="BitmapFont.h" />
+    <ClInclude Include="BitmapFontCharacter.h" />
+    <ClInclude Include="BluePrint.h" />
+    <ClInclude Include="BluePrintBase.h" />
+    <ClInclude Include="BluePrintManager.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Camera2D.h" />
+    <ClInclude Include="CheckForUpdatesJob.h" />
+    <ClInclude Include="CheckTextureChange.h" />
+    <ClInclude Include="Clock.h" />
+    <ClInclude Include="ClockManager.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="ConsoleCommands.h" />
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="DownloadFileJob.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EventSystem.h" />
+    <ClInclude Include="FileManager.h" />
+    <ClInclude Include="Filters.h" />
+    <ClInclude Include="FogParameters.h" />
+    <ClInclude Include="FrameBuffer.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Geometry.h" />
+    <ClInclude Include="GetPlayerColorJob.h" />
+    <ClInclude Include="GLUniform.h" />
+    <ClInclude Include="AI.h" />
+    <ClInclude Include="HashBufferJob.h" />
+    <ClInclude Include="IDraw.h" />
+    <ClInclude Include="IInventory.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="IRender.h" />
+    <ClInclude Include="IScene.h" />
+    <ClInclude Include="IStats.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="JobManager.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="LoadFileJob.h" />
+    <ClInclude Include="ManifestDownload.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapManager.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="MaterialDataOBJ.h" />
+    <ClInclude Include="MathUtilities.h" />
+    <ClInclude Include="Matrix44.h" />
+    <ClInclude Include="MatrixStack.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="ModelLoader.h" />
+    <ClInclude Include="ModelLoaderOBJ.h" />
+    <ClInclude Include="NamedProperties.h" />
+    <ClInclude Include="NamedProperty.h" />
+    <ClInclude Include="NamedPropertyBase.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="NodeType.h" />
+    <ClInclude Include="NPC.h" />
+    <ClInclude Include="objloader.hpp" />
+    <ClInclude Include="OpenGL.h" />
+    <ClInclude Include="PlayerColor.h" />
+    <ClInclude Include="ProfileData.h" />
+    <ClInclude Include="ProfileEntry.h" />
+    <ClInclude Include="ProfileEntryPool.h" />
+    <ClInclude Include="ProfileHelpers.h" />
+    <ClInclude Include="ProfileManager.h" />
+    <ClInclude Include="ProfileManagerOutput.h" />
+    <ClInclude Include="Profiler.h" />
+    <ClInclude Include="ProfilerConfig.h" />
+    <ClInclude Include="ProfilerMacros.h" />
+    <ClInclude Include="ProfilerPrereqs.h" />
+    <ClInclude Include="ProfileZone.h" />
+    <ClInclude Include="Renderer2D.h" />
+    <ClInclude Include="ParallaxParameters.h" />
+    <ClInclude Include="pugiconfig.hpp" />
+    <ClInclude Include="pugixml.hpp" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="RenderParameters.h" />
+    <ClInclude Include="ReportErrors.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="RPG.h" />
+    <ClInclude Include="sdMutex.hpp" />
+    <ClInclude Include="sdMutexLock.hpp" />
+    <ClInclude Include="SetManifestJob.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Shape.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="StateManager.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StopWatch.h" />
+    <ClInclude Include="StringExtensions.h" />
+    <ClInclude Include="Subscriber.h" />
+    <ClInclude Include="SubscriberBase.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TextManager.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="ThreadWrapper.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="TileType.h" />
+    <ClInclude Include="TimeManager.h" />
+    <ClInclude Include="Triangles.h" />
+    <ClInclude Include="Trie.h" />
+    <ClInclude Include="unzip.h" />
+    <ClInclude Include="UpdateManager.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="Vector2.h" />
+    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="Vector4.h" />
+    <ClInclude Include="Vertex.h" />
+    <ClInclude Include="HTTPWrapper.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="XMLExtensions.h" />
+    <ClInclude Include="zip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Agent.cpp" />
+    <ClCompile Include="Alarm.cpp" />
+    <ClCompile Include="AppInfo.cpp" />
+    <ClCompile Include="AStar.cpp" />
+    <ClCompile Include="BitmapFont.cpp" />
+    <ClCompile Include="BitmapFontCharacter.cpp" />
+    <ClCompile Include="BluePrintManager.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Camera2D.cpp" />
+    <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="ClockManager.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="ConsoleCommands.cpp" />
+    <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EventSystem.cpp" />
+    <ClCompile Include="FileManager.cpp" />
+    <ClCompile Include="FogParameters.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Geometry.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="IStats.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="JobManager.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapManager.cpp" />
+    <ClCompile Include="MathUtilities.cpp" />
+    <ClCompile Include="Matrix44.cpp" />
+    <ClCompile Include="MatrixStack.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="ModelLoaderOBJ.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="OpenGL.cpp" />
+    <ClCompile Include="PlayerColor.cpp" />
+    <ClCompile Include="ProfileEntry.cpp" />
+    <ClCompile Include="ProfileEntryPool.cpp" />
+    <ClCompile Include="ProfileHelpers.cpp" />
+    <ClCompile Include="ProfileManager.cpp" />
+    <ClCompile Include="ProfileManagerOutput.cpp" />
+    <ClCompile Include="Renderer2D.cpp" />
+    <ClCompile Include="ParallaxParameters.cpp" />
+    <ClCompile Include="pugixml.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="RenderParameters.cpp" />
+    <ClCompile Include="ReportErrors.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="sdMutex.cpp" />
+    <ClCompile Include="sdMutexLock.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="stb_image.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StringExtensions.cpp" />
+    <ClCompile Include="TextManager.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="TileType.cpp" />
+    <ClCompile Include="TimeManager.cpp" />
+    <ClCompile Include="Trie.cpp" />
+    <ClCompile Include="unzip.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UpdateManager.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="Vector4.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="XMLExtensions.cpp" />
+    <ClCompile Include="zip.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RPG.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

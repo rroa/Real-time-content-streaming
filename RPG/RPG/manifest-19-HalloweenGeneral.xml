@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?><manifest><applicationIdentity version="1.0.0" name="RPG Demo" author="Raul Roa" /><description>Test!</description><packages><package priority="HIGH"><file id="108" jobType="Download" file="entities.xml" /></package><package priority="MEDIUM"><file id="109" jobType="Download" file="avatar.png" /></package></packages></manifest>
